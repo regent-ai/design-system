@@ -1,0 +1,396 @@
+/* Shared multi-brand tokens for Regent, Autolaunch, and Techtree.
+ *
+ * Required runtime selectors:
+ *   :root[data-brand="regent"][data-theme="light"]
+ *   :root[data-brand="regent"][data-theme="dark"]
+ *   :root[data-brand="autolaunch"][data-theme="light"]
+ *   :root[data-brand="autolaunch"][data-theme="dark"]
+ *   :root[data-brand="techtree"][data-theme="light"]
+ *   :root[data-brand="techtree"][data-theme="dark"]
+ *
+ * This file does not provide a default brand. Consumers must set both
+ * data-brand and data-theme explicitly.
+ *
+ * Place your font files under:
+ *   priv/static/fonts/geist/
+ */
+
+@font-face {
+  font-family: "Geist UI Sans";
+  src:
+    url("/fonts/geist/Geist-Variable.woff2") format("woff2"),
+    url("/fonts/geist/Geist[wght].woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist UI Sans";
+  src: url("/fonts/geist/Geist-Italic[wght].woff2") format("woff2");
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src:
+    url("/fonts/geist/GeistMono-Variable.woff2") format("woff2"),
+    url("/fonts/geist/GeistMono[wght].woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Pixel Square";
+  src: url("/fonts/geist/GeistPixel-Square.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Pixel Grid";
+  src: url("/fonts/geist/GeistPixel-Grid.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Pixel Circle";
+  src: url("/fonts/geist/GeistPixel-Circle.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Pixel Triangle";
+  src: url("/fonts/geist/GeistPixel-Triangle.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Pixel Line";
+  src: url("/fonts/geist/GeistPixel-Line.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --space-0: 0;
+  --space-025: 2px;
+  --space-05: 4px;
+  --space-1: 8px;
+  --space-15: 12px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-xxl: 24px;
+  --radius-full: 9999px;
+
+  --font-family-ui-square: "Geist Pixel Square", "Geist UI Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family-ui-grid: "Geist Pixel Grid", "Geist UI Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family-ui-circle: "Geist Pixel Circle", "Geist UI Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family-ui-triangle: "Geist Pixel Triangle", "Geist UI Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family-ui-line: "Geist Pixel Line", "Geist UI Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --font-family-title: var(--font-family-ui-circle);
+  --font-family-ui: var(--font-family-ui-square);
+  --font-family-paragraph: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --type-display-size: 40px;
+  --type-display-line: 48px;
+  --type-title-lg-size: 28px;
+  --type-title-lg-line: 36px;
+  --type-title-size: 20px;
+  --type-title-line: 28px;
+  --type-headline-size: 16px;
+  --type-headline-line: 24px;
+  --type-body-size: 16px;
+  --type-body-line: 24px;
+  --type-label-size: 14px;
+  --type-label-line: 20px;
+  --type-caption-size: 13px;
+  --type-caption-line: 16px;
+  --type-legal-size: 13px;
+  --type-legal-line: 16px;
+  --type-prose-size: 16px;
+  --type-prose-line: 28px;
+  --type-code-size: 14px;
+  --type-code-line: 20px;
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+}
+
+:root[data-brand="regent"][data-theme="light"] {
+  --brand-ink: #315569;
+  --brand-primary: #034568;
+  --brand-paper: #FBF4DE;
+  --brand-accent: #D4A756;
+  --brand-support: #848078;
+
+  --color-fg: #315569;
+  --color-fg-muted: #6E6B64;
+  --color-fg-primary: #034568;
+  --color-fg-on-primary: #FBF4DE;
+  --color-bg: #FBF4DE;
+  --color-bg-alt: #F2E9D0;
+  --color-bg-secondary: #E9DFC3;
+  --color-bg-tertiary: #D7C7A1;
+  --color-bg-primary: #034568;
+  --color-bg-primary-wash: #E7EEF2;
+  --color-success: #1F7A57;
+  --color-danger: #B54A3E;
+}
+
+:root[data-brand="regent"][data-theme="dark"] {
+  --brand-ink: #315569;
+  --brand-primary: #034568;
+  --brand-paper: #FBF4DE;
+  --brand-accent: #D4A756;
+  --brand-support: #848078;
+
+  --color-fg: #FBF4DE;
+  --color-fg-muted: #C6BFAE;
+  --color-fg-primary: #8FB8CC;
+  --color-fg-on-primary: #10222B;
+  --color-bg: #14242D;
+  --color-bg-alt: #1B303B;
+  --color-bg-secondary: #254251;
+  --color-bg-tertiary: #315569;
+  --color-bg-primary: #8FB8CC;
+  --color-bg-primary-wash: #10222B;
+  --color-success: #58B98A;
+  --color-danger: #E07B6A;
+}
+
+:root[data-brand="autolaunch"][data-theme="light"] {
+  --brand-ink: #183B33;
+  --brand-primary: #0B7A4B;
+  --brand-paper: #F7F1DE;
+  --brand-accent: #CFA24F;
+  --brand-support: #687264;
+
+  --color-fg: #183B33;
+  --color-fg-muted: #657060;
+  --color-fg-primary: #0B7A4B;
+  --color-fg-on-primary: #F7F1DE;
+  --color-bg: #F7F1DE;
+  --color-bg-alt: #EEE7D1;
+  --color-bg-secondary: #E2DAC1;
+  --color-bg-tertiary: #CFC5AB;
+  --color-bg-primary: #0B7A4B;
+  --color-bg-primary-wash: #E2F0E7;
+  --color-success: #0A7447;
+  --color-danger: #B54A3E;
+}
+
+:root[data-brand="autolaunch"][data-theme="dark"] {
+  --brand-ink: #183B33;
+  --brand-primary: #0B7A4B;
+  --brand-paper: #F7F1DE;
+  --brand-accent: #CFA24F;
+  --brand-support: #687264;
+
+  --color-fg: #F7F1DE;
+  --color-fg-muted: #B7BEAF;
+  --color-fg-primary: #4FC487;
+  --color-fg-on-primary: #071D14;
+  --color-bg: #101815;
+  --color-bg-alt: #16231E;
+  --color-bg-secondary: #1C3129;
+  --color-bg-tertiary: #275040;
+  --color-bg-primary: #4FC487;
+  --color-bg-primary-wash: #0E2A1C;
+  --color-success: #67D49A;
+  --color-danger: #E07B6A;
+}
+
+:root[data-brand="techtree"][data-theme="light"] {
+  --brand-ink: #1C1C19;
+  --brand-paper: #F2F0EA;
+  --brand-support: #D8D4CA;
+  --brand-primary: #55624C;
+  --brand-accent: #A88957;
+
+  --color-fg: #1C1C19;
+  --color-fg-muted: #6E6B64;
+  --color-fg-primary: #55624C;
+  --color-fg-on-primary: #F2F0EA;
+  --color-bg: #F2F0EA;
+  --color-bg-alt: #E7E3DA;
+  --color-bg-secondary: #D8D4CA;
+  --color-bg-tertiary: #C6C1B4;
+  --color-bg-primary: #55624C;
+  --color-bg-primary-wash: #E4E8E1;
+  --color-success: #4F5C47;
+  --color-danger: #B54A3E;
+}
+
+:root[data-brand="techtree"][data-theme="dark"] {
+  --brand-ink: #1C1C19;
+  --brand-paper: #F2F0EA;
+  --brand-support: #D8D4CA;
+  --brand-primary: #55624C;
+  --brand-accent: #A88957;
+
+  --color-fg: #F2F0EA;
+  --color-fg-muted: #B6B0A3;
+  --color-fg-primary: #92A387;
+  --color-fg-on-primary: #161614;
+  --color-bg: #161614;
+  --color-bg-alt: #1C1C19;
+  --color-bg-secondary: #23231F;
+  --color-bg-tertiary: #2D2D29;
+  --color-bg-primary: #92A387;
+  --color-bg-primary-wash: #232A21;
+  --color-success: #7FA272;
+  --color-danger: #E07B6A;
+}
+
+html {
+  color: var(--color-fg);
+  background: var(--color-bg);
+}
+
+body {
+  margin: 0;
+  color: var(--color-fg);
+  background: var(--color-bg);
+  font-family: var(--font-family-ui);
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-family-mono);
+  font-size: var(--type-code-size);
+  line-height: var(--type-code-line);
+}
+
+.prose,
+[data-prose="true"],
+[data-font="paragraph"],
+.long-form {
+  font-family: var(--font-family-paragraph);
+}
+
+.prose p,
+.prose li,
+.prose blockquote,
+.prose figcaption,
+[data-prose="true"] p,
+[data-prose="true"] li,
+[data-prose="true"] blockquote,
+[data-prose="true"] figcaption,
+.long-form p,
+.long-form li,
+.long-form blockquote {
+  font-family: inherit;
+  font-size: var(--type-prose-size);
+  line-height: var(--type-prose-line);
+}
+
+[data-text-style="display"] {
+  font-family: var(--font-family-title);
+  font-size: var(--type-display-size);
+  line-height: var(--type-display-line);
+  font-weight: var(--font-weight-regular);
+}
+
+[data-text-style="title-lg"] {
+  font-family: var(--font-family-title);
+  font-size: var(--type-title-lg-size);
+  line-height: var(--type-title-lg-line);
+  font-weight: var(--font-weight-semibold);
+}
+
+[data-text-style="title"] {
+  font-family: var(--font-family-title);
+  font-size: var(--type-title-size);
+  line-height: var(--type-title-line);
+  font-weight: var(--font-weight-semibold);
+}
+
+[data-text-style="headline"] {
+  font-family: var(--font-family-title);
+  font-size: var(--type-headline-size);
+  line-height: var(--type-headline-line);
+  font-weight: var(--font-weight-semibold);
+}
+
+[data-text-style="body"] {
+  font-family: var(--font-family-ui);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line);
+  font-weight: var(--font-weight-regular);
+}
+
+[data-text-style="label"] {
+  font-family: var(--font-family-ui);
+  font-size: var(--type-label-size);
+  line-height: var(--type-label-line);
+  font-weight: var(--font-weight-semibold);
+}
+
+[data-text-style="caption"] {
+  font-family: var(--font-family-ui);
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line);
+  font-weight: var(--font-weight-semibold);
+}
+
+[data-text-style="legal"] {
+  font-family: var(--font-family-ui);
+  font-size: var(--type-legal-size);
+  line-height: var(--type-legal-line);
+  font-weight: var(--font-weight-regular);
+}
+
+[data-text-style="prose"] {
+  font-family: var(--font-family-paragraph);
+  font-size: var(--type-prose-size);
+  line-height: var(--type-prose-line);
+  font-weight: var(--font-weight-regular);
+}
+
+[data-text-style="code"] {
+  font-family: var(--font-family-mono);
+  font-size: var(--type-code-size);
+  line-height: var(--type-code-line);
+  font-weight: var(--font-weight-regular);
+}
