@@ -15,7 +15,7 @@ There is no default brand theme in the shared CSS.
 Consumers must set both selectors on the root element:
 
 ```html
-<html data-brand="regent" data-theme="light">
+<html data-brand="platform" data-theme="light">
 ```
 
 Valid brands:

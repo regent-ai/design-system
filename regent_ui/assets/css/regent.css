@@ -1,6 +1,6 @@
 :root {
-  --rg-font-display: "GeistPixelCircle", serif;
-  --rg-font-body: "GeistPixelSquare", sans-serif;
+  --rg-font-display: var(--font-family-title, "GeistPixelCircle", serif);
+  --rg-font-body: var(--font-family-ui, "GeistPixelSquare", sans-serif);
   --rg-bg: #090d15;
   --rg-panel: rgba(15, 22, 34, 0.84);
   --rg-panel-border: rgba(160, 181, 224, 0.18);
@@ -28,7 +28,7 @@
   --rg-intent-glow-danger: rgba(255, 120, 134, 0.24);
 }
 
-html[data-color-mode="dark"] {
+html[data-brand="platform"][data-theme="dark"] {
   --rg-bg: #034568;
   --rg-panel: color-mix(in oklch, #034568 74%, #315569 26%);
   --rg-panel-border: color-mix(in oklch, #fbf4de 16%, #034568 84%);
@@ -324,19 +324,19 @@ body {
 }
 
 .rg-regent-theme-techtree {
-  --rg-bg: #141109;
-  --rg-panel: color-mix(in srgb, #fbf5e3 86%, #1c1409 14%);
-  --rg-panel-border: rgba(131, 100, 35, 0.22);
-  --rg-text: #14120e;
-  --rg-muted: rgba(48, 39, 24, 0.66);
-  --rg-node-fill: rgba(17, 76, 167, 0.1);
-  --rg-node-stroke: #114ca7;
-  --rg-node-fill-active: rgba(17, 76, 167, 0.18);
-  --rg-node-stroke-active: #05070d;
-  --rg-node-fill-focused: rgba(212, 177, 91, 0.2);
-  --rg-node-stroke-focused: #6f5314;
-  --rg-sigil-color: #17130d;
-  --rg-sigil-color-active: #0f2349;
+  --rg-bg: var(--glass-bg-page, #141109);
+  --rg-panel: var(--glass-surface, color-mix(in srgb, #fbf5e3 86%, #1c1409 14%));
+  --rg-panel-border: var(--glass-panel-border, rgba(131, 100, 35, 0.22));
+  --rg-text: var(--glass-text-primary, #14120e);
+  --rg-muted: var(--glass-text-secondary, rgba(48, 39, 24, 0.66));
+  --rg-node-fill: color-mix(in srgb, var(--glass-text-accent, #114ca7) 12%, transparent);
+  --rg-node-stroke: var(--glass-text-accent, #114ca7);
+  --rg-node-fill-active: color-mix(in srgb, var(--glass-text-accent, #114ca7) 20%, transparent);
+  --rg-node-stroke-active: var(--glass-text-primary, #05070d);
+  --rg-node-fill-focused: color-mix(in srgb, var(--brand-accent, #d4b15b) 22%, transparent);
+  --rg-node-stroke-focused: var(--brand-accent, #6f5314);
+  --rg-sigil-color: var(--glass-text-primary, #17130d);
+  --rg-sigil-color-active: var(--glass-text-accent, #0f2349);
   --rg-intent-color-scene-action: #2f1c03;
   --rg-intent-color-navigate: #12355f;
   --rg-intent-color-back: #3b2b11;
@@ -349,35 +349,35 @@ body {
 }
 
 .rg-regent-theme-platform {
-  --rg-bg: #111615;
-  --rg-panel: color-mix(in srgb, #f7f1e1 84%, #121919 16%);
-  --rg-panel-border: rgba(73, 82, 78, 0.2);
-  --rg-text: #151714;
-  --rg-muted: rgba(33, 40, 39, 0.64);
-  --rg-node-fill: rgba(49, 85, 105, 0.14);
-  --rg-node-stroke: #315569;
-  --rg-node-fill-active: rgba(3, 69, 104, 0.22);
-  --rg-node-stroke-active: #07273b;
-  --rg-node-fill-focused: rgba(212, 167, 86, 0.24);
-  --rg-node-stroke-focused: #7a5e24;
-  --rg-sigil-color: #11140f;
-  --rg-sigil-color-active: #08283d;
+  --rg-bg: var(--glass-bg-page, #111615);
+  --rg-panel: var(--glass-surface, color-mix(in srgb, #f7f1e1 84%, #121919 16%));
+  --rg-panel-border: var(--glass-panel-border, rgba(73, 82, 78, 0.2));
+  --rg-text: var(--glass-text-primary, #151714);
+  --rg-muted: var(--glass-text-secondary, rgba(33, 40, 39, 0.64));
+  --rg-node-fill: color-mix(in srgb, var(--glass-text-accent, #315569) 14%, transparent);
+  --rg-node-stroke: var(--glass-text-accent, #315569);
+  --rg-node-fill-active: color-mix(in srgb, var(--brand-primary, #034568) 22%, transparent);
+  --rg-node-stroke-active: var(--glass-blue-900, #07273b);
+  --rg-node-fill-focused: color-mix(in srgb, var(--glass-warm-500, #d4a756) 24%, transparent);
+  --rg-node-stroke-focused: var(--glass-warm-500, #7a5e24);
+  --rg-sigil-color: var(--glass-text-primary, #11140f);
+  --rg-sigil-color-active: var(--glass-text-accent, #08283d);
 }
 
 .rg-regent-theme-autolaunch {
-  --rg-bg: #0d1718;
-  --rg-panel: rgba(249, 250, 243, 0.82);
-  --rg-panel-border: rgba(27, 62, 59, 0.16);
-  --rg-text: #0b1516;
-  --rg-muted: rgba(11, 21, 22, 0.62);
-  --rg-node-fill: rgba(15, 118, 110, 0.1);
-  --rg-node-stroke: #0f766e;
-  --rg-node-fill-active: rgba(184, 88, 43, 0.2);
-  --rg-node-stroke-active: #8f3d16;
-  --rg-node-fill-focused: rgba(217, 119, 6, 0.2);
-  --rg-node-stroke-focused: #a24d00;
-  --rg-sigil-color: #081214;
-  --rg-sigil-color-active: #532108;
+  --rg-bg: var(--glass-bg-page, #0d1718);
+  --rg-panel: var(--glass-surface, rgba(249, 250, 243, 0.82));
+  --rg-panel-border: var(--glass-panel-border, rgba(27, 62, 59, 0.16));
+  --rg-text: var(--glass-text-primary, #0b1516);
+  --rg-muted: var(--glass-text-secondary, rgba(11, 21, 22, 0.62));
+  --rg-node-fill: color-mix(in srgb, var(--glass-text-accent, #0f766e) 10%, transparent);
+  --rg-node-stroke: var(--glass-text-accent, #0f766e);
+  --rg-node-fill-active: color-mix(in srgb, var(--caustic-peach, #b8582b) 20%, transparent);
+  --rg-node-stroke-active: var(--caustic-amber, #8f3d16);
+  --rg-node-fill-focused: color-mix(in srgb, var(--brand-accent, #d97706) 20%, transparent);
+  --rg-node-stroke-focused: var(--brand-accent, #a24d00);
+  --rg-sigil-color: var(--glass-text-primary, #081214);
+  --rg-sigil-color-active: var(--glass-text-accent, #532108);
   --rg-intent-color-scene-action: #392100;
   --rg-intent-color-navigate: #0f3028;
   --rg-intent-color-back: #3f2a13;
